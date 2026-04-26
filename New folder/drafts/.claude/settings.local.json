@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-video@latest)",
+      "Bash(npx create-video@latest --template still-images)",
+      "Bash(npx create-video@latest --template \"Still images\")",
+      "Bash(pkill -f \"npx create-video\")",
+      "Bash(npx create-video@latest --typescript --no-install)",
+      "Bash(timeout 60 npx create-video@latest --no-install)",
+      "Bash(bash \"C:\\\\Users\\\\Admin\\\\AppData\\\\Roaming\\\\Claude\\\\local-agent-mode-sessions\\\\skills-plugin\\\\e9f57ade-6a68-424b-b1b1-83798e3cff4f\\\\354fd0be-2205-4231-bbe0-043aa28a8be3\\\\skills\\\\web-artifacts-builder\\\\scripts\\\\init-artifact.sh\" cut2d-point)",
+      "Bash(npm create *)",
+      "Bash(cat)",
+      "Bash(node create-placeholders.js)",
+      "Bash(rm create-placeholders.js)",
+      "Bash(npm install *)",
+      "Bash(timeout 15 npm run build)",
+      "Bash(timeout 20 npm run build)",
+      "Bash(npm run *)",
+      "Bash(curl -s http://localhost:3000)",
+      "Bash(curl -s http://localhost:3001)",
+      "Bash(curl -s http://localhost:3001/distributor-program)",
+      "Bash(chmod +x /tmp/test-pages.sh)",
+      "Bash(/tmp/test-pages.sh)",
+      "Bash(curl -s http://localhost:3004)",
+      "Bash(curl -s http://localhost:3005/electric-shear)",
+      "WebFetch(domain:spacekit-template.webflow.io)",
+      "Bash(cp \"/c/Users/Admin/OneDrive/Documents/Claude projects/benny website/PRODUC IMAGES/New folder/logo.jpeg\" ./logo.jpeg)",
+      "Bash(cp \"/c/Users/Admin/OneDrive/Documents/Claude projects/benny website/PRODUC IMAGES/New folder/logo.png\" ./logo.png)",
+      "Bash(cp \"/c/Users/Admin/OneDrive/Documents/Claude projects/benny website/PRODUC IMAGES/New folder/66eddcbf29d527e056d8dceb_Hero Background-p-2000.jpg\" ./why-cut2d.jpg)",
+      "Bash(cp \"/c/Users/Admin/OneDrive/Documents/Claude projects/benny website/PRODUC IMAGES/New folder/hand cutter open.jpeg\" ./products/hand-cutter-open.jpg)",
+      "Bash(cp \"/c/Users/Admin/OneDrive/Documents/Claude projects/benny website/PRODUC IMAGES/New folder/hand cutter back.jpeg\" ./products/hand-cutter-back.jpg)"
+    ]
+  }
+}

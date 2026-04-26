@@ -1,0 +1,14 @@
+QUICK SUMMARY
+9 Phases across 4 weeks:
+
+1: Align with client, finalize strategy, get assets
+2: Render hero video, prepare assets, set up Framer
+3: Build homepage, product pages, additional pages
+4: Polish, client review, revisions, final handoff
+
+
+
+Hero video rendering starts immediately (longest lead time)
+Framer setup can start in parallel
+Pages build once design system is ready
+Client feedback/revisions mid-week 4
