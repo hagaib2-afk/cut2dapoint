@@ -920,3 +920,194 @@ section {
   color: var(--color-dark-gray);
   font-size: 16px;
 }
+
+/* ========================================
+   BLADES PAGE & MODAL
+   ======================================== */
+
+.blades-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: var(--space-9) var(--container-padding);
+}
+
+.blade-card {
+  aspect-ratio: 1;
+  background: var(--color-light-gray);
+  border-radius: 4px;
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all var(--transition-normal);
+  border: 1px solid var(--color-hairline);
+  cursor: pointer;
+}
+
+.blade-card:hover {
+  border-color: var(--color-blue);
+  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.1);
+}
+
+.blade-image {
+  width: 100px;
+  height: 100px;
+  background: var(--color-white);
+  border-radius: 4px;
+  margin-bottom: var(--space-4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
+
+.blade-card h5 {
+  margin-bottom: var(--space-2);
+  color: var(--color-near-black);
+}
+
+.blade-card p {
+  font-size: 14px;
+  color: var(--color-mid-gray);
+  margin-bottom: var(--space-4);
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.modal-backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-backdrop.active {
+  display: flex;
+}
+
+.modal {
+  background: var(--color-white);
+  border-radius: 8px;
+  padding: var(--space-6);
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 20px 60px -12px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+  margin-bottom: var(--space-5);
+}
+
+.modal-header h3 {
+  margin-bottom: var(--space-2);
+  color: var(--color-near-black);
+}
+
+.modal-header p {
+  font-size: 14px;
+  color: var(--color-mid-gray);
+  margin: 0;
+}
+
+.modal-body {
+  margin-bottom: var(--space-5);
+}
+
+.modal-body p {
+  margin-bottom: var(--space-3);
+  color: var(--color-dark-gray);
+}
+
+.modal-email-section {
+  background: var(--color-light-gray);
+  padding: var(--space-4);
+  border-radius: 4px;
+  margin-bottom: var(--space-4);
+}
+
+.modal-email-section p {
+  margin: 0 0 var(--space-2) 0;
+  font-size: 14px;
+  color: var(--color-mid-gray);
+}
+
+.email-display {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  background: var(--color-white);
+  border: 1px solid var(--color-hairline);
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 14px;
+  color: var(--color-dark-gray);
+}
+
+.copy-button {
+  padding: 8px 16px;
+  background: var(--color-blue);
+  color: var(--color-white);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: var(--font-weight-semibold);
+  transition: background var(--transition-fast);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.copy-button:hover {
+  background: var(--color-blue-hover);
+}
+
+.copy-button.copied {
+  background: #28a745;
+}
+
+.modal-footer {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: flex-end;
+}
+
+.modal-footer button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.modal-footer .btn-secondary {
+  background: var(--color-light-gray);
+  color: var(--color-dark-gray);
+}
+
+.modal-footer .btn-secondary:hover {
+  background: var(--color-hairline);
+}
+
+.modal-footer .btn-primary {
+  background: var(--color-blue);
+  color: var(--color-white);
+}
+
+.modal-footer .btn-primary:hover {
+  background: var(--color-blue-hover);
+}

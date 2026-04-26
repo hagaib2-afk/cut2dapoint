@@ -132,3 +132,67 @@ document.querySelectorAll('a[href*="mailto:"]').forEach(link => {
     // Some users may not have email configured, but we let the browser handle it
   });
 });
+
+// ========================================
+// ORDER MODAL
+// ========================================
+
+const modalBackdrop = document.querySelector('.modal-backdrop');
+const bladeCards = document.querySelectorAll('.blade-card');
+const modalCloseBtn = document.querySelector('.modal-close-btn');
+const copyEmailBtn = document.querySelector('.copy-email-btn');
+
+// Open modal on blade card click
+bladeCards.forEach(card => {
+  card.addEventListener('click', () => {
+    const bladeName = card.querySelector('h5').textContent;
+    const modalTitle = document.querySelector('.modal-header h3');
+    modalTitle.textContent = 'Order: ' + bladeName;
+    modalBackdrop.classList.add('active');
+  });
+});
+
+// Close modal
+function closeModal() {
+  modalBackdrop.classList.remove('active');
+}
+
+if (modalCloseBtn) {
+  modalCloseBtn.addEventListener('click', closeModal);
+}
+
+// Close modal on backdrop click
+if (modalBackdrop) {
+  modalBackdrop.addEventListener('click', (e) => {
+    if (e.target === modalBackdrop) {
+      closeModal();
+    }
+  });
+}
+
+// Copy email to clipboard
+if (copyEmailBtn) {
+  copyEmailBtn.addEventListener('click', () => {
+    const email = 'sales@c2dp.com';
+    navigator.clipboard.writeText(email).then(() => {
+      const originalText = copyEmailBtn.textContent;
+      copyEmailBtn.textContent = 'Copied!';
+      copyEmailBtn.classList.add('copied');
+
+      setTimeout(() => {
+        copyEmailBtn.textContent = originalText;
+        copyEmailBtn.classList.remove('copied');
+      }, 2000);
+    }).catch(() => {
+      // Fallback for older browsers
+      alert('Email: sales@c2dp.com');
+    });
+  });
+}
+
+// Close modal on Escape key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && modalBackdrop.classList.contains('active')) {
+    closeModal();
+  }
+});
