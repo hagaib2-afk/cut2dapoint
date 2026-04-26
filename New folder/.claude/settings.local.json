@@ -24,7 +24,20 @@
       "Bash(xargs -r kill)",
       "mcp__Claude_in_Chrome__browser_batch",
       "mcp__Claude_in_Chrome__javascript_tool",
-      "Bash(pkill -f \"python3 -m http.server\")"
+      "Bash(pkill -f \"python3 -m http.server\")",
+      "Bash(cat)",
+      "Bash(chmod +x /tmp/verify.sh)",
+      "Bash(/tmp/verify.sh)",
+      "Bash(curl -s http://localhost:8000/index.html)",
+      "Read(//tmp/**)",
+      "Bash(mv \"Manual Shear.jpeg\" \"Manual_Shear.jpeg\")",
+      "Bash(cp \"/c/Users/Admin/OneDrive/Documents/Claude projects/benny website/PRODUC IMAGES/images to use/download.png\" \"zikit.JPG\")",
+      "Bash(cp \"/c/Users/Admin/OneDrive/Documents/Claude projects/benny website/PRODUC IMAGES/download.png\" \"zikit.JPG\")",
+      "Bash(cp logo.png favicon-32.png)",
+      "Bash(cp logo.png apple-touch-icon.png)",
+      "Bash(cp logo.png favicon.ico)",
+      "Bash(mkdir -p ../videos)",
+      "Bash(cp -r \"/c/Users/Admin/OneDrive/Documents/Claude projects/benny website/videos/frames\" ../videos/)"
     ]
   }
 }
