@@ -30,7 +30,7 @@
 
   <!-- HERO SECTION -->
   <section class="hero">
-    <video class="hero-video" autoplay muted loop playsinline poster="images/hero-poster.jpg" preload="metadata">
+    <video class="hero-video" id="heroVideo" autoplay muted playsinline poster="images/hero-poster.jpg" preload="metadata">
       <source src="videos/hero.mp4" type="video/mp4">
     </video>
     <div class="hero-overlay"></div>
@@ -217,6 +217,18 @@
 
   <script src="js/main.js"></script>
   <script>
+    // Hero video - 2 second pause on final frame before looping
+    const heroVideo = document.getElementById('heroVideo');
+    if (heroVideo) {
+      heroVideo.addEventListener('ended', () => {
+        setTimeout(() => {
+          heroVideo.currentTime = 0;
+          heroVideo.play();
+        }, 2000);
+      });
+    }
+
+    // Shipping video - show fallback image when ended
     const video = document.getElementById('shippingVideo');
     const image = document.getElementById('shippingImage');
 
