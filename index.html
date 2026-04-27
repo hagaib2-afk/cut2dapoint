@@ -127,9 +127,10 @@
 
   <!-- NUMBERS BAR -->
   <section class="numbers-bar">
-    <video class="numbers-bar-video" autoplay muted playsinline poster="images/hero-poster.jpg">
+    <video class="numbers-bar-video" id="shippingVideo" autoplay muted playsinline poster="images/hero-poster.jpg">
       <source src="videos/shipping.mp4.mp4" type="video/mp4">
     </video>
+    <img id="shippingImage" class="numbers-bar-video" src="images/shipping-globe-2.png" alt="Shipping Routes" style="display: none;">
     <div class="container">
       <div class="numbers-grid">
         <div class="numbers-cell">
@@ -214,5 +215,16 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    const video = document.getElementById('shippingVideo');
+    const image = document.getElementById('shippingImage');
+
+    if (video && image) {
+      video.addEventListener('ended', () => {
+        video.style.display = 'none';
+        image.style.display = 'block';
+      });
+    }
+  </script>
 </body>
 </html>
