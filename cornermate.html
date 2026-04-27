@@ -25,15 +25,6 @@
     </ul>
   </nav>
 
-  <!-- PRODUCT HERO -->
-  <section class="product-hero">
-    <div class="product-hero-content">
-      <p class="eyebrow">PRECISION EQUIPMENT</p>
-      <h2>Cornermate Table</h2>
-      <p class="body-large">Precision corner cutting integrated into your production line.</p>
-    </div>
-  </section>
-
   <!-- PRODUCT CONTENT -->
   <section class="product-content">
     <!-- LEFT COLUMN: DESCRIPTION & SPECS -->
@@ -42,6 +33,7 @@
         <h4 style="margin-bottom: var(--space-4);">Overview</h4>
         <p class="body" style="margin-bottom: var(--space-5);">The Cornermate is purpose-built for corner operations. Swap blade cartridges to cut radiused or notched corners — without recalibration. The integrated positioning table guarantees repeatable placement every cut, every time.</p>
         <p class="body" style="margin-bottom: var(--space-5);">Popular with sign shops running high-mix jobs and fabricators doing edge finishing on chromaLuxe, aluminum, and composite panels. The Cornermate Table reduces hand finishing time and delivers the clean geometry your customers expect.</p>
+        <a href="blades.html" class="btn btn-primary" style="margin-bottom: var(--space-8);">Order Corner Blades</a>
       </div>
 
       <div>
@@ -99,12 +91,12 @@
       </div>
     </div>
 
-    <!-- RIGHT COLUMN: SCROLL ANIMATION -->
+    <!-- RIGHT COLUMN: EXPLOSION VIDEO & DIAGRAM -->
     <div class="product-right">
-      <div class="frame-preload-wrapper">
-        <div class="frame-preload"></div>
-      </div>
-      <canvas class="scroll-canvas" width="1280" height="720"></canvas>
+      <video class="cornermate-explosion-video" id="cornermateExplosionVideo" autoplay muted playsinline>
+        <source src="videos/cornermate-explosion.mp4" type="video/mp4">
+      </video>
+      <img class="cornermate-exploded-diagram" id="cornermateExplodedDiagram" src="images/cornermate-exploded.png" alt="Cornermate Exploded Diagram" style="display: none;">
     </div>
   </section>
 
@@ -169,8 +161,18 @@
   </footer>
 
   <script src="js/main.js"></script>
-  <script src="js/scroll-video.js"></script>
   <script>
+    // Video end event - show diagram
+    const cornermateVideo = document.getElementById('cornermateExplosionVideo');
+    const cornermateDiagram = document.getElementById('cornermateExplodedDiagram');
+
+    if (cornermateVideo) {
+      cornermateVideo.addEventListener('ended', () => {
+        cornermateVideo.style.display = 'none';
+        cornermateDiagram.style.display = 'block';
+      });
+    }
+
     // Tab switching
     document.querySelectorAll('.product-tab').forEach(tab => {
       tab.addEventListener('click', () => {
