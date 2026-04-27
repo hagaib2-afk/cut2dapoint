@@ -732,10 +732,13 @@ section {
 .numbers-bar {
   position: relative;
   background: var(--color-white);
-  padding: var(--space-8) var(--container-padding);
+  padding: var(--space-10) var(--container-padding);
   border-top: 1px solid var(--color-hairline);
   border-bottom: 1px solid var(--color-hairline);
   overflow: hidden;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
 }
 
 .numbers-bar-video {
@@ -751,6 +754,34 @@ section {
 .numbers-bar .container {
   position: relative;
   z-index: 2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.numbers-cta {
+  text-align: center;
+  margin-top: var(--space-4);
+}
+
+.btn-primary-light {
+  background: var(--color-white);
+  color: var(--color-blue);
+  border: 2px solid var(--color-white);
+  font-weight: var(--font-weight-semibold);
+  padding: 14px 32px;
+  font-size: 15px;
+  transition: all var(--transition-normal);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary-light:hover {
+  background: var(--color-blue);
+  color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37, 167, 226, 0.4);
 }
 
 .numbers-grid {
