@@ -98,12 +98,12 @@
       </div>
     </div>
 
-    <!-- RIGHT COLUMN: SCROLL ANIMATION -->
+    <!-- RIGHT COLUMN: EXPLOSION VIDEO & DIAGRAM -->
     <div class="product-right">
-      <div class="frame-preload-wrapper">
-        <div class="frame-preload"></div>
-      </div>
-      <canvas class="scroll-canvas" width="1280" height="720"></canvas>
+      <video class="manual-explosion-video" id="manualExplosionVideo" autoplay muted playsinline>
+        <source src="videos/manual-explosion.mp4" type="video/mp4">
+      </video>
+      <img class="manual-shear-exploded-diagram" id="manualExplodedDiagram" src="images/manual-shear-exploded.png" alt="Manual Shear Exploded Diagram" style="display: none;">
     </div>
   </section>
 
@@ -158,8 +158,18 @@
   </footer>
 
   <script src="js/main.js"></script>
-  <script src="js/scroll-video.js"></script>
   <script>
+    // Video end event - show diagram
+    const manualVideo = document.getElementById('manualExplosionVideo');
+    const manualDiagram = document.getElementById('manualExplodedDiagram');
+
+    if (manualVideo) {
+      manualVideo.addEventListener('ended', () => {
+        manualVideo.style.display = 'none';
+        manualDiagram.style.display = 'block';
+      });
+    }
+
     // Tab switching
     document.querySelectorAll('.product-tab').forEach(tab => {
       tab.addEventListener('click', () => {
