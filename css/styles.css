@@ -714,15 +714,15 @@ section {
 }
 
 .partner-logo {
-  height: 40px;
+  height: 80px;
   width: auto;
-  filter: grayscale(100%) opacity(0.5);
-  transition: filter var(--transition-normal);
-  max-width: 150px;
+  filter: none;
+  transition: transform var(--transition-normal);
+  max-width: 300px;
 }
 
 .logos-strip:hover .partner-logo {
-  filter: grayscale(0) opacity(1);
+  filter: none;
 }
 
 /* ========================================
