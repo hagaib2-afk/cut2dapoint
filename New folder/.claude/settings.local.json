@@ -37,7 +37,8 @@
       "Bash(cp logo.png apple-touch-icon.png)",
       "Bash(cp logo.png favicon.ico)",
       "Bash(mkdir -p ../videos)",
-      "Bash(cp -r \"/c/Users/Admin/OneDrive/Documents/Claude projects/benny website/videos/frames\" ../videos/)"
+      "Bash(cp -r \"/c/Users/Admin/OneDrive/Documents/Claude projects/benny website/videos/frames\" ../videos/)",
+      "mcp__Claude_Preview__preview_start"
     ]
   }
 }
