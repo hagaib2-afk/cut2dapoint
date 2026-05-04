@@ -11,17 +11,24 @@ export const metadata = {
 }
 
 export default function ManualShearPage() {
-  const specs = [
-    { label: 'Blade Length', value: '310mm' },
-    { label: 'Max Capacity — Aluminum', value: '2mm' },
-    { label: 'Max Capacity — Brass', value: '1.5mm' },
-    { label: 'Max Capacity — Steel', value: '1mm' },
-    { label: 'Max Capacity — Plastic', value: '5mm' },
-    { label: 'Bearing Type', value: 'Sintered bronze, self-lubricating' },
-    { label: 'Base Footprint', value: '450 × 300mm' },
-    { label: 'Weight', value: '18kg' },
-    { label: 'Operation', value: 'Single-lever, right or left-hand configurable' },
-  ]
+  const model45 = {
+    name: 'Model 45',
+    sku: 'RA10073',
+    cuttingWidth: '45cm',
+    dimensions: '71 × 35.5 × 21cm',
+    specs: [
+      { label: 'Maximum Cutting Width', value: '450mm' },
+      { label: 'Aluminum Capacity', value: '1mm' },
+      { label: 'Engravers Brass Capacity', value: '0.5mm' },
+      { label: 'Plated Steel Capacity', value: '0.38mm' },
+      { label: 'Plastic Capacity', value: '3mm' },
+      { label: 'Blade Material', value: 'Manganese steel (T10), 52+ HRC' },
+      { label: 'Overall Dimensions', value: '710 × 355 × 210mm' },
+      { label: 'Bench-mounted', value: 'Yes, with mounting holes' },
+    ],
+  }
+
+  const currentModel = model45
 
   return (
     <>
@@ -68,13 +75,38 @@ export default function ManualShearPage() {
       {/* SPEC TABLE */}
       <Section narrow>
         <Eyebrow>Specifications</Eyebrow>
-        <h3 className="text-h3 mt-6 mb-16">Key technical specifications.</h3>
+        <h3 className="text-h3 mt-6 mb-12">Model 45 (RA10073) — Professional Cutting Shear</h3>
 
+        {/* Model Info */}
+        <div className="bg-off-white rounded-lg p-8 mb-12">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <div className="text-xs font-semibold uppercase tracking-widest text-gray-custom-500 mb-2">
+                Item Number
+              </div>
+              <div className="text-h4 text-gray-custom-800">{currentModel.sku}</div>
+            </div>
+            <div>
+              <div className="text-xs font-semibold uppercase tracking-widest text-gray-custom-500 mb-2">
+                Cutting Width
+              </div>
+              <div className="text-h4 text-gray-custom-800">{currentModel.cuttingWidth}</div>
+            </div>
+            <div>
+              <div className="text-xs font-semibold uppercase tracking-widest text-gray-custom-500 mb-2">
+                Overall Dimensions
+              </div>
+              <div className="text-h4 text-gray-custom-800">{currentModel.dimensions}</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Specifications Table */}
         <div className="space-y-0 border-t border-gray-custom-100">
-          {specs.map((spec, i) => (
+          {currentModel.specs.map((spec, i) => (
             <div
               key={i}
-              className="flex justify-between items-start py-6 border-b border-gray-custom-100"
+              className="flex justify-between items-start py-4 border-b border-gray-custom-100"
             >
               <span className="text-body text-gray-custom-500">{spec.label}</span>
               <span className="text-body font-medium text-gray-custom-800">

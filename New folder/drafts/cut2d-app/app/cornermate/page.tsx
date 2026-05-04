@@ -97,11 +97,11 @@ export default function CornermatePage() {
         <div className="container">
           <div className="grid lg:grid-cols-5 md:grid-cols-2 gap-8 lg:gap-0">
             {[
+              { label: 'Item Number', value: 'RA10051' },
+              { label: 'Interchangeable Dies', value: '6 options' },
               { label: 'Cut Types', value: 'Radius / Notch / Chamfer' },
-              { label: 'Radius', value: '6mm' },
-              { label: 'Chamfer', value: '12mm' },
-              { label: 'Materials', value: 'Aluminum, ACM, ChromaLuxe, plastic' },
-              { label: 'Cycle Time', value: '<2 seconds' },
+              { label: 'Base Footprint', value: '~150 × 150mm' },
+              { label: 'Bench-mounted', value: 'Yes, with hardware' },
             ].map((spec, i) => (
               <div
                 key={i}

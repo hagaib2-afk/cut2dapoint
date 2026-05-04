@@ -56,11 +56,11 @@ export default function ElectricShearPage() {
         <div className="container">
           <div className="grid lg:grid-cols-5 md:grid-cols-2 gap-8 lg:gap-0">
             {[
-              { label: 'Capacity', value: 'up to 3mm aluminum' },
-              { label: 'Cycle Rate', value: '45 cuts/min' },
-              { label: 'Power', value: '230V single-phase' },
-              { label: 'Weight', value: '42kg' },
-              { label: 'Footprint', value: '600 × 400mm' },
+              { label: 'Item Number', value: 'RA10074' },
+              { label: 'Cutting Width', value: '32cm (320mm)' },
+              { label: 'Power Supply', value: '230V single-phase' },
+              { label: 'Overall Dimensions', value: '59.7 × 50 × 26cm' },
+              { label: 'Blade Material', value: 'T10 tool steel, 52+ HRC' },
             ].map((spec, i) => (
               <div
                 key={i}
