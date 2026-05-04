@@ -26,7 +26,8 @@ const config: Config = {
         'card': '0 2px 8px rgba(0,0,0,0.04)',
       },
       fontFamily: {
-        sans: ['var(--font-inter-tight)', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-dm-sans)', 'system-ui', 'sans-serif'],
+        grotesk: ['var(--font-grotesk)', 'system-ui', 'sans-serif'],
       },
       container: {
         center: true,
